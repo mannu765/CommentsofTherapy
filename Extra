@@ -1,0 +1,570 @@
+// ListTile  (
+                        //   title: const Text('Age'),
+                        //   // trailing: DropdownButton(items: ['male',"gem" ], onChanged: (Object? value) {  },),
+                        //   onTap: () {
+                        //     showModalBottomSheet(
+                        //         context: context,
+                        //         builder: (context) {
+                        //           return StatefulBuilder(
+                        //               builder: (context, bottomSheetSetState) {
+                        //             return Column(children: [
+                        //               Column(
+                        //                 children: agefilter.keys.map((String key) {
+                        //                   return CheckboxListTile(
+                        //                     title: Text(key),
+                        //                     value: agefilter[key],
+                        //                     controlAffinity:
+                        //                         ListTileControlAffinity.leading,
+                        //                     onChanged: (bool? value) {
+                        //                       bottomSheetSetState(() {
+                        //                         agefilter[key] = value!;
+                        //                       });
+                        //                     },
+                        //                   );
+                        //                 }).toList(),
+                        //               ),
+                        //               Row(
+                        //                 children: [
+                        //                   Padding(
+                        //                     padding:
+                        //                         const EdgeInsets.fromLTRB(200, 0, 0, 0),
+                        //                     child: ElevatedButton(
+                        //                         onPressed: () {
+                        //                           Navigator.pop(context);
+                        //                         },
+                        //                         child: const Text("Cancel")),
+                        //                   ),
+                        //                   Padding(
+                        //                     padding:
+                        //                         const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                        //                     child: ElevatedButton(
+                        //                         child: const Text("Apply"),
+                        //                         onPressed: () {
+                        //                           y = agefilter.keys
+                        //                               .where((k) => agefilter[k]!)
+                        //                               .toList();
+                        //
+                        //                           setState(() {});
+                        //
+                        //                           // print(y);
+                        //
+                        //                           List<Map<String, int>> listOfDicts = [];
+                        //                           for (var range in y) {
+                        //                             var splitRange = range.split("-");
+                        //                             int lower = int.parse(splitRange[0]);
+                        //                             int upper = int.parse(splitRange[1]);
+                        //                             listOfDicts.add(
+                        //                                 {'lower': lower, 'upper': upper});
+                        //                           }
+                        //                           result = listOfDicts;
+                        //                           Navigator.pop(context);
+                        //                           Navigator.pop(context);
+                        //                           print('result : $result');
+                        //                           if (a.isEmpty &&
+                        //                               listOfDicts.isEmpty &&
+                        //                               _selectedfilterfromDate == DateTime.utc(1900, 1, 1) &&
+                        //                               _selectedfiltertoDate == DateTime.utc(2100, 12, 31)) {
+                        //                             f = PhysioDatabase.db.fetchData1();
+                        //                           } else {
+                        //                             f = PhysioDatabase.db
+                        //                                 .ageDaysAndDateFilter(
+                        //                                     result,
+                        //                                     a,
+                        //                                     _selectedfilterfromDate,
+                        //                                     _selectedfiltertoDate);
+                        //                           }
+                        //
+                        //                           setState(() {});
+                        //                         }),
+                        //                   ),
+                        //                 ],
+                        //               ),
+                        //             ]);
+                        //           });
+                        //         });
+                        //   },
+                        // ), //age
+
+                        //age
+                        // ListTile(
+                        //   title: const Text('Days'),
+                        //   onTap: () {
+                        //     showModalBottomSheet(
+                        //         shape: const RoundedRectangleBorder(
+                        //           borderRadius: BorderRadius.only(
+                        //             topLeft: Radius.circular(30),
+                        //             topRight: Radius.circular(30),
+                        //           ),
+                        //         ),
+                        //         context: context,
+                        //         builder: (context) {
+                        //           return StatefulBuilder(
+                        //               builder: (context, bottomSheetSetState) {
+                        //             return Column(
+                        //               children: [
+                        //                 SizedBox(
+                        //                   height: 310,
+                        //                   child: SingleChildScrollView(
+                        //                     child: Column(children: [
+                        //                       Column(
+                        //                         children:
+                        //                             daysfilter.keys.map((String key) {
+                        //                           return CheckboxListTile(
+                        //                             title: Text(key),
+                        //                             value: daysfilter[key],
+                        //                             controlAffinity:
+                        //                                 ListTileControlAffinity.leading,
+                        //                             onChanged: (bool? value) {
+                        //                               bottomSheetSetState(() {
+                        //                                 daysfilter[key] = value!;
+                        //                               });
+                        //                             },
+                        //                           );
+                        //                         }).toList(),
+                        //                       ),
+                        //                     ]),
+                        //                   ),
+                        //                 ),
+                        //                 SizedBox(
+                        //                   height: 20,
+                        //                 ),
+                        //                 Padding(
+                        //                   padding:
+                        //                       const EdgeInsets.fromLTRB(120, 0, 0, 0),
+                        //                   child: Row(
+                        //                     children: [
+                        //                       Padding(
+                        //                         padding: const EdgeInsets.fromLTRB(
+                        //                             100, 0, 0, 0),
+                        //                         child: ElevatedButton(
+                        //                             onPressed: () {
+                        //                               Navigator.pop(context);
+                        //                             },
+                        //                             child: const Text("Cancel")),
+                        //                       ),
+                        //                       Padding(
+                        //                         padding: const EdgeInsets.fromLTRB(
+                        //                             10, 0, 0, 0),
+                        //                         child: ElevatedButton(
+                        //                             child: const Text("Apply"),
+                        //                             onPressed: () {
+                        //                               z = daysfilter.keys
+                        //                                   .where((k) => daysfilter[k]!)
+                        //                                   .toList();
+                        //
+                        //                               a = z
+                        //                                   .map((day) => {
+                        //                                         'day': day.substring(0, 3)
+                        //                                       })
+                        //                                   .toList();
+                        //                               // print(a);
+                        //                               Navigator.pop(context);
+                        //                               Navigator.pop(context);
+                        //                               print('a : $a');
+                        //                               setState(() {});
+                        //                               if (a.isEmpty &&
+                        //                                   result.isEmpty &&
+                        //                                   _selectedfilterfromDate ==
+                        //                                       DateTime.utc(1900, 1, 1) &&
+                        //                                   _selectedfiltertoDate ==
+                        //                                       DateTime.utc(
+                        //                                           2100, 12, 31)) {
+                        //                                 f = PhysioDatabase.db
+                        //                                     .fetchData1();
+                        //                               } else {
+                        //                                 f = PhysioDatabase.db
+                        //                                     .ageDaysAndDateFilter(
+                        //                                         result,
+                        //                                         a,
+                        //                                         _selectedfilterfromDate,
+                        //                                         _selectedfiltertoDate);
+                        //                               }
+                        //                             }),
+                        //                       ),
+                        //                     ],
+                        //                   ),
+                        //                 ),
+                        //               ],
+                        //             );
+                        //           });
+                        //         });
+                        //   },
+                        // ),
+                        //days
+                        // ListTile(
+                        //   title: const Text('Date'),
+                        //   onTap: () {
+                        //     showModalBottomSheet(
+                        //         shape: const RoundedRectangleBorder(
+                        //           borderRadius: BorderRadius.only(
+                        //             topLeft: Radius.circular(30),
+                        //             topRight: Radius.circular(30),
+                        //           ),
+                        //         ),
+                        //         context: context,
+                        //         builder: (context) {
+                        //           return StatefulBuilder(
+                        //               builder: (context, bottomSheetSetState) {
+                        //             return Column(
+                        //               children: [
+                        //                 SizedBox(
+                        //                   height: 310,
+                        //                   child: SingleChildScrollView(
+                        //                     child: Column(children: [
+                        //                       Column(
+                        //                         children: [
+                        //                           Padding(
+                        //                             padding: const EdgeInsets.fromLTRB(
+                        //                                 15, 40, 0, 0),
+                        //                             child: SizedBox(
+                        //                               height: 60,
+                        //                               width: 350,
+                        //                               child: TextField(
+                        //                                 keyboardType:
+                        //                                     TextInputType.datetime,
+                        //                                 decoration: InputDecoration(
+                        //                                   hintText: "From",
+                        //                                   border:
+                        //                                       const OutlineInputBorder(),
+                        //                                   suffixIcon: IconButton(
+                        //                                     icon: const Icon(
+                        //                                         Icons.calendar_today),
+                        //                                     onPressed: () async {
+                        //                                       final selectedDate1 =
+                        //                                           await showDatePicker(
+                        //                                         context: context,
+                        //                                         initialDate:
+                        //                                             DateTime.now(),
+                        //                                         firstDate: DateTime(1900),
+                        //                                         lastDate: DateTime(2100),
+                        //                                       );
+                        //                                       if (selectedDate1 != null) {
+                        //                                         setState(() {
+                        //                                           _selectedfilterfromDate =
+                        //                                               selectedDate1;
+                        //                                           filterdatefrom.text =
+                        //                                               _formatter.format(
+                        //                                                   _selectedfilterfromDate);
+                        //                                         });
+                        //                                       }
+                        //                                       if (_selectedfiltertoDate !=
+                        //                                           DateTime.utc(
+                        //                                               2100, 12, 31)) {
+                        //                                         _selectedfiltertoDate =
+                        //                                             DateTime.utc(
+                        //                                                 2100, 12, 31);
+                        //                                         filterdateto.clear();
+                        //                                       }
+                        //                                     },
+                        //                                   ),
+                        //                                 ),
+                        //                                 controller: filterdatefrom,
+                        //                                 // TextEditingController(
+                        //                                 //     text: _selectedfromDate != null
+                        //                                 //         ? _formatter.format(_selectedfromDate!)
+                        //                                 //         : ""),
+                        //                               ),
+                        //                             ),
+                        //                           ), //fromdate
+                        //                           Padding(
+                        //                             padding: const EdgeInsets.fromLTRB(
+                        //                                 20, 25, 0, 4),
+                        //                             child: SizedBox(
+                        //                               height: 60,
+                        //                               width: 350,
+                        //                               child: TextField(
+                        //                                 keyboardType:
+                        //                                     TextInputType.datetime,
+                        //                                 decoration: InputDecoration(
+                        //                                   hintText: "To",
+                        //                                   border:
+                        //                                       const OutlineInputBorder(),
+                        //                                   suffixIcon: IconButton(
+                        //                                     icon: const Icon(
+                        //                                         Icons.calendar_today),
+                        //                                     onPressed: () async {
+                        //                                       final selectedDate2 =
+                        //                                           await showDatePicker(
+                        //                                         context: context,
+                        //                                         initialDate:
+                        //                                             _selectedfilterfromDate,
+                        //                                         firstDate:
+                        //                                             _selectedfilterfromDate,
+                        //                                         lastDate: DateTime(2100),
+                        //                                       );
+                        //
+                        //                                       if (selectedDate2 != null) {
+                        //                                         setState(() {
+                        //                                           _selectedfiltertoDate =
+                        //                                               selectedDate2;
+                        //                                           filterdateto.text =
+                        //                                               _formatter.format(
+                        //                                                   _selectedfiltertoDate);
+                        //                                         });
+                        //                                       }
+                        //                                     },
+                        //                                   ),
+                        //                                 ),
+                        //                                 controller: filterdateto,
+                        //                               ),
+                        //                             ),
+                        //                           ),
+                        //                         ],
+                        //                       ),
+                        //                     ]),
+                        //                   ),
+                        //                 ),
+                        //                 const SizedBox(
+                        //                   height: 20,
+                        //                 ),
+                        //                 Padding(
+                        //                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        //                   child: Row(
+                        //                     children: [
+                        //                       Padding(
+                        //                         padding:
+                        //                             const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        //                         child: ElevatedButton(
+                        //                             onPressed: () {
+                        //                               _selectedfilterfromDate =
+                        //                                   DateTime.utc(1900, 1, 1);
+                        //                               _selectedfiltertoDate =
+                        //                                   DateTime.utc(2100, 12, 31);
+                        //                               filterdatefrom.clear();
+                        //                               filterdateto.clear();
+                        //                             },
+                        //                             child: const Text("Clear")),
+                        //                       ),
+                        //                       Padding(
+                        //                         padding: const EdgeInsets.fromLTRB(
+                        //                             100, 0, 0, 0),
+                        //                         child: ElevatedButton(
+                        //                             onPressed: () {
+                        //                               Navigator.pop(context);
+                        //                             },
+                        //                             child: const Text("Cancel")),
+                        //                       ),
+                        //                       Padding(
+                        //                         padding: const EdgeInsets.fromLTRB(
+                        //                             10, 0, 0, 0),
+                        //                         child: ElevatedButton(
+                        //                             child: const Text("Apply"),
+                        //                             onPressed: () {
+                        //                               Navigator.pop(context);
+                        //                               Navigator.pop(context);
+                        //                               setState(() {});
+                        //                               print(_selectedfilterfromDate);
+                        //                               print(_selectedfiltertoDate);
+                        //                               f = PhysioDatabase.db
+                        //                                   .ageDaysAndDateFilter(
+                        //                                       result,
+                        //                                       a,
+                        //                                       _selectedfilterfromDate,
+                        //                                       _selectedfiltertoDate);
+                        //                             }),
+                        //                       ),
+                        //                     ],
+                        //                   ),
+                        //                 ),
+                        //               ],
+                        //             );
+                        //           });
+                        //         });
+                        //   },
+                        // ),
+
+                        //date
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        // appBar: AppBar(
+      //   automaticallyImplyLeading: false,
+      //   title: const Padding(
+      //     padding: EdgeInsets.fromLTRB(45, 0, 0, 0),
+      //     child: Center(child: Text(' Easio ')),
+      //   ),
+      //   actions: [
+      //     IconButton(
+      //         onPressed: () {
+      //           bottomfiltersheet();
+      //         },
+      //         icon: const Icon(
+      //           Icons.filter_list_alt,
+      //           color: Colors.white,
+      //         ))
+      //   ],
+      // ),
+      // body:Stack(
+      //   children: [
+      //     FutureBuilder(
+      //         future: f,
+      //         builder: (BuildContext context,
+      //             AsyncSnapshot<List<PatientData>>
+      //                 snapshot) {
+      //           if (snapshot.hasData) {
+      //             if (snapshot.data!.isEmpty) {
+      //               return const Center(
+      //                 child: Text("No data"),
+      //               );
+      //             }
+      //           }
+      //           if (snapshot.hasData) {
+      //             return ListView.builder(
+      //                 itemCount: snapshot.data!.length,
+      //                 itemBuilder: (context, index) {
+      //                   if (y != []) {
+      //                     return _displayCard(
+      //                         snapshot.data![index]);
+      //                   } else {
+      //                     return const Center(
+      //                       child: Text(
+      //                           "No Patients of desired age"),
+      //                     );
+      //                   }
+      //                 });
+      //           } else {
+      //             return const Center(
+      //               child: Text("No Patients for Today"),
+      //             );
+      //           }
+      //         }),
+      //     Padding(
+      //       padding: const EdgeInsets.fromLTRB(0, 0, 10, 10),
+      //       child: Align(
+      //         alignment: Alignment.bottomRight,
+      //         child: FloatingActionButton(
+      //           onPressed: () async {
+      //             await Navigator.of(context)
+      //                 .push(
+      //               MaterialPageRoute(
+      //                 builder: (context) => MyCustomForm(),
+      //               ),
+      //             )
+      //                 .then((value) {
+      //               setState(() {
+      //                 f = PhysioDatabase.db.fetchData1();
+      //               });
+      //             });
+      //           },
+      //           child: const Icon(Icons.add),
+      //         ),
+      //       ),
+      //     ),
+      //   ],
+      // ),
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+       // FutureBuilder(
+            //   future: f,
+            //   builder: (BuildContext context,
+            //       AsyncSnapshot<List<PatientData>> snapshot) {
+            //     if (snapshot.hasData) {
+            //       if (snapshot.data!.isEmpty) {
+            //         return const SliverFillRemaining(
+            //           child: Center(
+            //             child: Text("No data"),
+            //           ),
+            //         );
+            //       }
+            //     }
+            //     return SliverList(
+            //       delegate: SliverChildBuilderDelegate(
+            //         (context, index) {
+            //           if (y != []) {
+            //             return _displayCard(
+            //                 snapshot.data![index]);
+            //           } else {
+            //             return const Center(
+            //               child:
+            //                   Text("No Patients of desired age"),
+            //             );
+            //           }
+            //         },
+            //         childCount: snapshot.hasData
+            //             ? snapshot.data!.length
+            //             : 0,
+            //       ),
+            //     );
+            //   },
+            // ),
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // body:Stack(
+//   children: [
+//     FutureBuilder(
+//         future: f,
+//         builder: (BuildContext context,
+//             AsyncSnapshot<List<PatientData>>
+//                 snapshot) {
+//           if (snapshot.hasData) {
+//             if (snapshot.data!.isEmpty) {
+//               return const Center(
+//                 child: Text("No data"),
+//               );
+//             }
+//           }
+//           if (snapshot.hasData) {
+//             return ListView.builder(
+//                 itemCount: snapshot.data!.length,
+//                 itemBuilder: (context, index) {
+//                   if (y != []) {
+//                     return _displayCard(
+//                         snapshot.data![index]);
+//                   } else {
+//                     return const Center(
+//                       child: Text(
+//                           "No Patients of desired age"),
+//                     );
+//                   }
+//                 });
+//           } else {
+//             return const Center(
+//               child: Text("No Patients for Today"),
+//             );
+//           }
+//         }),
+//     Padding(
+//       padding: const EdgeInsets.fromLTRB(0, 0, 10, 10),
+//       child: Align(
+//         alignment: Alignment.bottomRight,
+//         child: FloatingActionButton(
+//           onPressed: () async {
+//             await Navigator.of(context)
+//                 .push(
+//               MaterialPageRoute(
+//                 builder: (context) => MyCustomForm(),
+//               ),
+//             )
+//                 .then((value) {
+//               setState(() {
+//                 f = PhysioDatabase.db.fetchData1();
+//               });
+//             });
+//           },
+//           child: const Icon(Icons.add),
+//         ),
+//       ),
+//     ),
+//   ],
+// ),
